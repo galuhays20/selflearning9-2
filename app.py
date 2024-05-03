@@ -1,16 +1,9 @@
-from flask import ( 
-    Flask, 
-    request, 
-    render_template, 
-    jsonify, 
-    redirect, 
-    url_for
-)
-from pymongo import MongoClient
-import requests
-from datetime import datetime
-from bson import ObjectId
+import os
+from os.path import join, dirname
 from dotenv import load_dotenv
+from flask import Flask, render_template, request, redirect, url_for
+from pymongo import MongoClient
+from bson import ObjectId
 
 
 dotenv_path = join(dirname(__file__), '.env')
